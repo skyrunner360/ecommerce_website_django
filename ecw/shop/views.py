@@ -117,7 +117,7 @@ def handlerequest(request):
     form = request.POST
     response_dict = {}
     for i in form.keys():
-        response.dict[i] = form[i]
+        response_dict[i] = form[i]
         if i =='CHECKSUMHASH':
             checksum = form[i]
     verify = checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
